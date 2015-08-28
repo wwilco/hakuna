@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <title>hakuna-form</title>
+  </head>
+  <style media="screen">
+    * {
+      box-sizing: border-box;
+    }
+    .form-div {
+      border-bottom:1px solid grey;
+    }
+    table td {
+      font:10px Arial;
+      color:grey;
+      padding-right:10px;
+    }
+    table tr td {
+      padding-bottom: 3px;
+    }
+    table {
+      display:inline-block;
+    }
+    form {
+      display:inline;
+    }
+    input {
+      size:22;
+    }
+  </style>
+  <body>
+    <div class="container">
+
+    <div class="form-div">
+      <!-- <label for="">Assesment Date</label> -->
+      <form class="" action="index.html" method="POST">
+        <table class='top-table'>
+          <tr>
+            <td>
+              <span style="color:black"><h5>Assesment Date</h5></span>
+              </td>
+            <td> <input type="text" name="month" value="" required></td>
+            <td> <input type="number" name="day" value="" required></td>
+            <td> <input type="number" name="year" value="" required></td>
+            <td>
+              <span style="color:black"> at </span>
+              <select id="hours" name="hours">
+                <option></option>
+              </select>:
+              <select id="minutes" name="minutes">
+                <option></option>
+              </select>
+            </td>
+            <td>
+              <select name="ampm">
+                <option>AM</option>
+                <option>PM</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Month</td>
+            <td>Day</td>
+            <td>Year</td>
+          </tr>
+        </table>
+      </form>
+    </div>
+
+    <div class="form-div">
+      <h3>Patient Information:</h3>
+    </div>
+
+    <div class="row">
+      <form method="post" name="phoneForm" role="form" required>
+        <div class="col-md-6 col-xs-12">
+          <h5>Full Name</h5>
+          <table>
+            <tr>
+              <td><input type="text" name="name" value=""></td>
+              <td></td>
+              <td><input type="text" name="name" value=""></td>
+            </tr>
+            <tr>
+              <td>Full Name</td>
+              <td></td>
+              <td>Last Name</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="col-md-6 col-xs-12">
+          <h5>Phone Number</h5>
+          <table>
+            <tr>
+              <td><input type="number" step="3" name="areaCode" required></td>
+              <td>-</td>
+              <td><input type="number" maxlength="7" name="phoneNo" required></td>
+            </tr>
+            <tr>
+              <td>Area Code</td>
+              <td></td>
+              <td>Phone Number</td>
+            </tr>
+          </table>
+        </div>
+      </form>
+    </div>
+
+    <div class="row">
+
+      <form role="form" name="emailForm" required>
+        <div class="col-md-6 col-xs-12">
+          <h5>E-mail</h5>
+          <table>
+            <tr>
+              <td>
+                <input type="email" name="email" placeholder="example@example.com" style="width:214%" required>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+      <div class="col-md-6 col-xs-12">
+        <h5>Address</h5>
+        <table>
+          <tr>
+            <td><input type="text" name="name" value="" style="width:208%"></td>
+          </tr>
+          <tr>
+            <td>Street Address</td>
+          </tr>
+          <tr>
+            <td><input type="text" name="name" value="" style="width:208%"></td>
+          </tr>
+          <tr>
+            <td>Street Address Line 2</td>
+          </tr>
+          <tr>
+            <td><input type="text" name="name" value=""></td>
+            <td><input type="text" name="name" value=""></td>
+          </tr>
+          <tr>
+            <td>City</td>
+            <td>State/Province</td>
+          </tr>
+          <tr>
+            <td><input type="number" name="name" value=""></td>
+            <td><select class="" name="">
+              <option value="USA">United States</option>
+              <option value="UKR">Ukraine</option>
+              <option value="ARE">United Arab Emirates</option>
+              <option value="GBR">United Kingdom</option>
+            </select></td>
+          </tr>
+          <tr>
+            <td>Postal/Zip Code</td>
+            <td>Country</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 col-xs-12">
+        <h5>Birth Date</h5>
+        <table>
+          <tr>
+            <td>
+              <select class="" name="">
+                <option></option>
+                <option value="JAN">January</option>
+                <option value="FEB">Feburary</option>
+              </select>
+            </td>
+            <td>
+              <select class="" name="">
+                <option></option>
+                <option value="1">1</option>
+              </select>
+            </td>
+            <td>
+              <select name="dob">
+                <option></option>
+                <option value="1988">1988</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Month</td>
+            <td>Day</td>
+            <td>Year</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="col-md-6 col-xs-12">
+        <h5>Gender</h5>
+        <select class="" name="">
+          <option></option>
+          <option value="F">Female</option>
+          <option value="M">Male</option>
+          <option value="O">Other</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- <input type="submit" name="submit" value="submit" onclick="validateEmail()"></input> -->
+    <input type="submit" name="submit" value="submit" onclick="(validatePhone() && validateEmail())"></input>
+
+  </form>
+
+
+    <!-- <input type="submit" name="submit" onsubmit="return (validatePhone() && validateEmail(document.emailForm.email) )"> -->
+  </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  // hour generator
+  var hours = document.getElementById('hours');
+  for (var h=1; h<13; h++) {
+      var option = document.createElement('option');
+      var hour = option.setAttribute('value', h);
+      option.appendChild(document.createTextNode(h));
+      hours.appendChild(option);
+  };
+  // minute generator
+  var minutes = document.getElementById('minutes');
+  for (var m=1; m<60; m++){
+    var option = document.createElement('option');
+    var minute = option.setAttribute('value', m);
+    option.appendChild(document.createTextNode(m));
+    minutes.appendChild(option);
+  };
+  // email validation
+  function validateEmail(input){
+    var input = document.emailForm.email;
+    var emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if(input.value.match(emailFormat)){
+      return true;
+    } else {
+      alert("You have entered an invalid email address!");
+      return false;
+    }
+  };
+  // phone validtion: area code and phone number
+  function validatePhone(input1, input2){
+    var input1 = document.phoneForm.areaCode;
+    var input2 = document.phoneForm.phoneNo;
+    var phoneFormat1 = /^\d{3}$/;
+    var phoneFormat2 = /^\d{7}$/;
+    if(input1.value.match(phoneFormat1) &&  input2.value.match(phoneFormat2)){
+      return true;
+    } else {
+      alert("You have entered an invalid phone number!");
+      return false;
+    }
+  };
+  // allows pop message on email if incorrect
+  $('form').submit(function(event){
+    event.preventDefault();
+  });
+  </script>
+</html>
