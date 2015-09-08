@@ -3,7 +3,10 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <title>bootstrap-skeleton</title>
+    <title>validator</title>
+    <style media="screen">
+
+    </style>
   </head>
   <body>
     <form data-toggle="validator" role="form">
@@ -20,9 +23,10 @@
         <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
         <span class="help-block with-errors">Hey look, this one has feedback icons!</span>
       </div>
-      <div class="form-group">
+      <div class="form-group has-feedback">
         <label for="inputEmail" class="control-label">Email</label>
-        <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Bruh, that email address is invalid" required>
+        <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="email address is invalid" required>
+        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
         <div class="help-block with-errors"></div>
       </div>
       <div class="form-group">
@@ -41,13 +45,13 @@
         <div class="radio">
           <label>
             <input type="radio" name="underwear" required>
-            Boxers
+            Radio1
           </label>
         </div>
         <div class="radio">
           <label>
             <input type="radio" name="underwear" required>
-            Briefs
+            Radio2
           </label>
         </div>
       </div>
@@ -55,7 +59,7 @@
         <div class="checkbox">
           <label>
             <input type="checkbox" id="terms" data-error="Before you wreck yourself" required>
-            Check yourself
+            Check
           </label>
           <div class="help-block with-errors"></div>
         </div>
@@ -64,7 +68,12 @@
         <button type="submit" class="btn btn-primary">Submit</button>
       </div>
     </form>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="validator.min.js"></script>
+    <script src="http://platform.twitter.com/widgets.js"></script>
   </body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
 </html>
