@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="js/tablesorter/jquery.tablesorter.js"></script> -->
+    <script type="text/javascript" src="js/sortable.js"></script>
+    <script type="text/javascript" src="js/moment.js"></script>
+
+    <title>table sort</title>
+    <style media="screen">
+    #myTable, tr, th, td {
+      border:1px solid black;
+      padding:10px;
+    }
+    #myTable tr th {
+      background-color:#C2E0FF;
+    }
+    #myTable tr:nth-child(odd) {
+      background:lightgrey;
+    }
+    #myTable td {
+      text-align: center;
+      vertical-align: middle;
+    }
+    </style>
+  </head>
+  <body>
+    <table id="myTable" class="sortable">
+      <thead>
+      <tr>
+          <th>Last Name</th>
+          <th>First Name</th>
+          <th>Email</th>
+          <th>Due</th>
+          <th>Web Site</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+          <td>Smith</td>
+          <td>John</td>
+          <td>jsmith@gmail.com</td>
+          <td>$50.00</td>
+          <td>http://www.jsmith.com</td>
+      </tr>
+      <tr>
+          <td>Bach</td>
+          <td>Frank</td>
+          <td>fbach@yahoo.com</td>
+          <td>$50.00</td>
+          <td>http://www.frank.com</td>
+      </tr>
+      <tr>
+          <td>Doe</td>
+          <td>Jason</td>
+          <td>jdoe@hotmail.com</td>
+          <td>$100.00</td>
+          <td>http://www.jdoe.com</td>
+      </tr>
+      <tr>
+          <td>Conway</td>
+          <td>Tim</td>
+          <td>tconway@earthlink.net</td>
+          <td>$50.00</td>
+          <td id='timeStamp'></td>
+      </tr>
+      </tbody>
+      </table>
+
+      <p id="demo"></p>
+
+
+  </body>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script>
+
+    var d = new Date();
+    var month = d.getMonth() + 1;
+    var day = d.getDate();
+    var year = d.getFullYear();
+    var time = d.toLocaleTimeString();
+    var string = d.toUTCString();
+    document.getElementById("demo").innerHTML = time + " " + month + "/" + day + " or " + string ;
+
+    var timeStamp = moment().format('ddd MMM D, h:mma');
+    document.getElementById("timeStamp").innerHTML = timeStamp;
+  </script>
+</html>

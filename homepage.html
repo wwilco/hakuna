@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <title></title>
+    <style media="screen">
+    body {
+      box-sizing: border-box;
+    }
+
+      .navbar {
+        margin-bottom:5px;
+      }
+      .contentView {
+        display:inline;
+      }
+      button {
+        position:fixed;
+        bottom:0;
+        left:0;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <nav class="navbar navbar-default">
+        <!-- <div class="container-fluid"> -->
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Hakuna</a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <!-- <button type="submit" class="btn btn-default">Submit</button> -->
+              </form>
+              <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
+              <!-- <li><a href="#">DataBase</a></li> -->
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">DataBase<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">All</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Care-Recipients</a></li>
+                  <li><a href="#">Care-Givers</a></li>
+                  <li><a href="#">Nurses</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Health Pros</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Notifications<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">All</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Case Owner</a></li>
+                  <li><a href="#">Schedules</a></li>
+                </ul>
+              </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+              <!-- <li><a href="#">Link</a></li> -->
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Profile</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Sign In/Sign Out</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+      </nav>
+
+    	<div class="row" style='border:1px solid purple'>
+    		<div class="col-sm-4 col-md-3 sidebar">
+          <div class="mini-submenu">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </div>
+          <div class="list-group">
+              <!-- <span href="#" class="list-group-item active">
+                  Submenu
+                  <span class="pull-right" id="slide-submenu">
+                      <i class="fa fa-times"></i>
+                  </span>
+              </span> -->
+              <a href="#" class="list-group-item">
+                  <i class="fa fa-comment-o"></i> Recently Viewed
+              </a>
+              <a href="#" class="list-group-item">Care Recipients</a>
+              <a href="#" class="list-group-item">
+                  <i class="fa fa-user"></i> Care Givers
+              </a>
+              <a href="#" class="list-group-item">
+                  <i class="fa fa-folder-open-o"></i> Nurses<span class="badge">14</span>
+              </a>
+          </div>
+        </div>
+    	<!-- </div> -->
+
+      <!-- Nav Tabs -->
+      <!-- <div class="row" style='border:1px solid purple; display:inline-block; float:left'> -->
+        <div class='contentView' style='border:1px solid purple; display:inline-block; position:fixed'>
+          <nav>
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Profile</a></li>
+              <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Health</a></li>
+              <li role="presentation"><a href="#calendar" aria-controls="calender" role="tab" data-toggle="tab">Calender</a></li>
+              <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">CareTeam</a></li>
+              <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">CareLogs</a></li>
+              <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Billing</a></li>
+              <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Forms</a></li>
+            </ul>
+          </nav>
+
+          <!-- Tab Content -->
+          <div class="tab-content" style="float:left; display:inline">
+            <div role="tabpanel" class="tab-pane active" id="home">
+              <div class="alert alert-warning" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Yay!:</span>
+                Warnign!!!
+              </div>
+              <!-- <div class="form-group has-feedback">
+                <label for="inputTwitter" class="control-label">Twitter</label>
+                <div class="input-group">
+                  <span class="input-group-addon">@</span>
+                  <input type="text" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" id="inputTwitter" placeholder="1000hz" >
+                </div>
+              </div> -->
+            </div>
+            <!-- Messages -->
+            <div role="tabpanel" class="tab-pane" id="profile">
+              <div class="alert alert-danger" role="alert" style="max-width:70%">
+                <div class="container">
+
+                <div class="form-div">
+                  <!-- <label for="">Assesment Date</label> -->
+                  <form class="" action="index.html" method="POST" style="width:70%">
+                    <table class='top-table'>
+                      <tr>
+                        <td>
+                          <span style="color:black"><h5>Assesment Date</h5></span>
+                          </td>
+                        <td> <input type="text" name="month" value="" required></td>
+                        <td> <input type="number" name="day" value="" required></td>
+                        <td> <input type="number" name="year" value="" required></td>
+                        <td>
+                          <span style="color:black"> at </span>
+                          <select id="hours" name="hours">
+                            <option></option>
+                          </select>:
+                          <select id="minutes" name="minutes">
+                            <option></option>
+                          </select>
+                        </td>
+                        <td>
+                          <select name="ampm">
+                            <option>AM</option>
+                            <option>PM</option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>Month</td>
+                        <td>Day</td>
+                        <td>Year</td>
+                      </tr>
+                    </table>
+                  </form>
+                </div>
+
+                <div class="form-div">
+                  <h3>Patient Information:</h3>
+                </div>
+
+                <div class="row">
+                  <form method="post" name="phoneForm" role="form" required>
+                    <div class="col-md-4 col-xs-12" style='border:1px solid red'>
+                      <h5>Full Name</h5>
+                      <table>
+                        <tr>
+                          <td><input type="text" name="name" value=""></td>
+                          <td></td>
+                          <td><input type="text" name="name" value=""></td>
+                        </tr>
+                        <tr>
+                          <td>Full Name</td>
+                          <td></td>
+                          <td>Last Name</td>
+                        </tr>
+                      </table>
+                    </div>
+
+                    <div class="col-md-4 col-xs-12">
+                      <h5>Phone Number</h5>
+                      <table>
+                        <tr>
+                          <td><input type="number" step="3" name="areaCode" required></td>
+                          <td>-</td>
+                          <td><input type="number" maxlength="7" name="phoneNo" required></td>
+                        </tr>
+                        <tr>
+                          <td>Area Code</td>
+                          <td></td>
+                          <td>Phone Number</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="row">
+
+                  <form role="form" name="emailForm" required>
+                    <div class="col-md-6 col-xs-12">
+                      <h5>E-mail</h5>
+                      <table>
+                        <tr>
+                          <td>
+                            <input type="email" name="email" placeholder="example@example.com" style="width:214%" required>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+
+                  <div class="col-md-6 col-xs-12">
+                    <h5>Address</h5>
+                    <table>
+                      <tr>
+                        <td><input type="text" name="name" value="" style="width:208%"></td>
+                      </tr>
+                      <tr>
+                        <td>Street Address</td>
+                      </tr>
+                      <tr>
+                        <td><input type="text" name="name" value="" style="width:208%"></td>
+                      </tr>
+                      <tr>
+                        <td>Street Address Line 2</td>
+                      </tr>
+                      <tr>
+                        <td><input type="text" name="name" value=""></td>
+                        <td><input type="text" name="name" value=""></td>
+                      </tr>
+                      <tr>
+                        <td>City</td>
+                        <td>State/Province</td>
+                      </tr>
+                      <tr>
+                        <td><input type="number" name="name" value=""></td>
+                        <td><select class="" name="">
+                          <option value="USA">United States</option>
+                          <option value="UKR">Ukraine</option>
+                          <option value="ARE">United Arab Emirates</option>
+                          <option value="GBR">United Kingdom</option>
+                        </select></td>
+                      </tr>
+                      <tr>
+                        <td>Postal/Zip Code</td>
+                        <td>Country</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 col-xs-12">
+                    <h5>Birth Date</h5>
+                    <table>
+                      <tr>
+                        <td>
+                          <select class="" name="">
+                            <option></option>
+                            <option value="JAN">January</option>
+                            <option value="FEB">Feburary</option>
+                          </select>
+                        </td>
+                        <td>
+                          <select class="" name="">
+                            <option></option>
+                            <option value="1">1</option>
+                          </select>
+                        </td>
+                        <td>
+                          <select name="dob">
+                            <option></option>
+                            <option value="1988">1988</option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Month</td>
+                        <td>Day</td>
+                        <td>Year</td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <div class="col-md-6 col-xs-12">
+                    <h5>Gender</h5>
+                    <select class="" name="">
+                      <option></option>
+                      <option value="F">Female</option>
+                      <option value="M">Male</option>
+                      <option value="O">Other</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- <input type="submit" name="submit" value="submit" onclick="validateEmail()"></input> -->
+                <input type="submit" name="submit" value="submit" onclick="(validatePhone() && validateEmail())"></input>
+
+              </form>
+              </div>
+              </div>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="calendar">
+              <form role="form" data-toggle="validator">
+                <div class="form-group">
+                  <label for="inputEmail">Email</label>
+                  <input type="email" id="inputEmail" data-error="Bruh, that email address is invalid" required>
+                  <div class="help-block with-errors"></div>
+                </div>
+              </form>
+            </div>
+
+            <!-- <div role="tabpanel" class="tab-pane" id="profile">
+              <div class="alert alert-danger" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Error:</span>
+                Enter a valid email address
+              </div>
+            </div> -->
+          </div> <!-- end: Tab Content -->
+
+
+
+        </div>
+
+
+
+      </div>
+
+      <button type="" name="">Create New Profile</button>
+
+    </div> <!-- container -->
+
+
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</html>
