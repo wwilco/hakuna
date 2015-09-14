@@ -21,11 +21,19 @@
         left:0;
       }
 
+      /*profile tab */
+      h3, h5 {
+        line-height:10%;
+      }
+      .profile-table td {
+        padding-right: 5px;
+      }
+
     </style>
   </head>
   <body>
 
-    <div class="container">
+    <div class="container-fluid">
       <nav class="navbar navbar-default">
         <!-- <div class="container-fluid"> -->
           <!-- Brand and toggle get grouped for better mobile display -->
@@ -90,7 +98,7 @@
 
 
       <!-- Side Nav -->
-    	<div class="row">
+    	<div class="row" style='margin-left:5%'>
     		<div class="col-sm-4 col-md-3 sidebar">
           <div class="mini-submenu">
               <span class="icon-bar"></span>
@@ -388,9 +396,55 @@
             <div role="tabpanel" class="tab-pane" id="calendar">
               <form role="form" data-toggle="validator">
                 <div class="form-group">
-                  <label for="inputEmail">Email</label>
-                  <input type="email" id="inputEmail" data-error="Bruh, that email address is invalid" required>
-                  <div class="help-block with-errors"></div>
+                  <div class="" style="border:1px solid purple; width:1000px; height:500px">
+                    <a href="#" class="" style='display:inline'><span class="glyphicon glyphicon-minus"></span>Edit</a>
+                    <table class='profile-table'>
+                      <tr>
+                        <td>
+                          <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcST4A450WfK4IAZY_IQGupqxaAhPLJ2qBmcos8lgmeSl0MjkZf5N7kkQw" alt="" style='display:block'/>
+                        </td>
+                        <td>
+                          <div class="care-recip" style='border:0px solid green'>
+                            <section>
+                              <h3>Harriet Smith 84 F</h3>
+                              <p>Address: 580 West End Ave <br>New York, NY 10024 <br> <span class="glyphicon glyphicon-earphone"></span> (212)345-6789</p>
+                            </section>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="care-organizer" style="border-left:1px solid lightgrey;padding-left:5px;">
+                            <p> <h5>Primary Care Organizer : </h5>
+                              John Smith
+                              <br>
+                              Realtion: Son<br><span class="glyphicon glyphicon-earphone"></span><a href="tel:646-753-0987"> (212)345-6789 </a><br>
+                              <span class="glyphicon glyphicon-envelope"></span><a href="mailto:johnsmith@gmail.com" target='_blank'> johnsmith@gmail.com</a>
+                            </p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="care-team" style="border-left:1px solid lightgrey;padding-left:5px;">
+                            <p> <h5>Care Team : </h5> Care Giver : Hillary Somebody
+                              <br> Nurse : Someone Elsetoo
+                              <br>Case Owner : Will Wilcox <br>Case Organizer: John Smith, Jane Smith
+
+                            </p>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+
+
+                  </div>
+
+                </div>
+              </form>
+            </div>
+
+
+            <div role="tabpanel" class="tab-pane" id="settings">
+              <form role="form" data-toggle="validator">
+                <div class="form-group">
+
                 </div>
               </form>
             </div>
