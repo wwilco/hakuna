@@ -88,7 +88,9 @@
           </div><!-- /.navbar-collapse -->
       </nav>
 
-    	<div class="row" style='border:1px solid purple'>
+
+      <!-- Side Nav -->
+    	<div class="row">
     		<div class="col-sm-4 col-md-3 sidebar">
           <div class="mini-submenu">
               <span class="icon-bar"></span>
@@ -96,29 +98,77 @@
               <span class="icon-bar"></span>
           </div>
           <div class="list-group">
-              <!-- <span href="#" class="list-group-item active">
-                  Submenu
-                  <span class="pull-right" id="slide-submenu">
-                      <i class="fa fa-times"></i>
-                  </span>
-              </span> -->
-              <a href="#" class="list-group-item">
-                  <i class="fa fa-comment-o"></i> Recently Viewed
-              </a>
-              <a href="#" class="list-group-item">Care Recipients</a>
-              <a href="#" class="list-group-item">
-                  <i class="fa fa-user"></i> Care Givers
-              </a>
-              <a href="#" class="list-group-item">
-                  <i class="fa fa-folder-open-o"></i> Nurses<span class="badge">14</span>
-              </a>
+              <div class="accordion" id="accordion2">
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle list-group-item" data-toggle="collapse" data-parent="#accordion2" href="#accordian-recent-view">
+                      <i class="fa fa-comment-o"></i> Recently Viewed
+                    </a>
+                  </div>
+                  <div id="accordian-recent-view" class="accordion-body collapse in">
+                    <div class="accordion-inner">
+                      <ol>
+                        <li>Mock Data</li>
+                        <li>Mock Data</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle list-group-item" data-toggle="collapse" data-parent="#accordion2" href="#accordian-care-recip">Care Recipients</a>
+                  </div>
+                  <div id="accordian-care-recip" class="accordion-body collapse in">
+                    <div class="accordion-inner">
+                      <ol>
+                        <li><input type="text" class="form-control" placeholder="Search"></li>
+                        <li>Mock Data</li>
+                        <li>Mock Data</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle list-group-item" data-toggle="collapse" data-parent="#accordion2" href="#accordian-care-giver">Care Givers</a>
+                  </div>
+                  <div id="accordian-care-giver" class="accordion-body collapse in">
+                    <div class="accordion-inner">
+                      <ol style="list-style:none">
+                        <li><input type="text" class="form-control" placeholder="Search"></li>
+                        <li>Mock Data</li>
+                        <li>Mock Data</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle list-group-item" data-toggle="collapse" data-parent="#accordion2" href="#accordian-nurse">Nurses<span class="badge">14</span></a>
+                  </div>
+                  <div id="accordian-nurse" class="accordion-body collapse in">
+                    <div class="accordion-inner">
+                      <ol>
+                        <li><input type="text" class="form-control" placeholder="Search"></li>
+                        <li>Mock Data</li>
+                        <li>Mock Data</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+
+                <a href="#" class="list-group-item" style='margin-top:10px'>
+                    <span class="glyphicon glyphicon-plus"></span> Create New Profile
+                </a>
+              </div> <!-- End accordian list -->
           </div>
         </div>
     	<!-- </div> -->
 
       <!-- Nav Tabs -->
       <!-- <div class="row" style='border:1px solid purple; display:inline-block; float:left'> -->
-        <div class='contentView' style='border:1px solid purple; display:inline-block; position:fixed'>
+        <div class='contentView' style='position:fixed'>
           <nav>
             <ul class="nav nav-tabs" role="tablist">
               <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Profile</a></li>
@@ -362,7 +412,7 @@
 
       </div>
 
-      <button type="" name="">Create New Profile</button>
+      <!-- <button type="" name="">Create New Profile</button> -->
 
     </div> <!-- container -->
 
@@ -370,4 +420,10 @@
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  $('#accordian-care-recip').collapse("hide");
+  $('#accordian-care-giver').collapse("hide");
+  $('#accordian-nurse').collapse("hide");
+
+  </script>
 </html>
