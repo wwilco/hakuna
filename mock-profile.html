@@ -19,6 +19,19 @@
         /*display:inline;*/
         /*float:left;*/
       }
+      .glyphicon-ok {
+        color:green;
+      }
+      .glyphicon-remove {
+        color:red;
+      }
+      th {
+        padding: 15px;
+        background-color:#99FFCC;
+      }
+      td {
+        padding:0 5px 0 5px;
+      }
       /*.care-recip > img {
         float:left;
         display:inline;
@@ -64,8 +77,99 @@
         </tr>
       </table>
 
+      <div class="" style='display:inline-block; float:left; width:200px;height:300px;background-color:#FFFFA3;margin:20px 20px 0 20px'>
+
+        <h2 style='margin:0 auto; color:green'>Active</h2>
+        <ul style='list-style:none'>
+          <li><span class="glyphicon glyphicon-ok"></span> Dogs</li>
+          <li><span class="glyphicon glyphicon-ok"></span> Music</li>
+          <li><span class="glyphicon glyphicon-ok"></span> Cooking</li>
+          <li><span class="glyphicon glyphicon-remove"></span> Cats</li>
+          <li><span class="glyphicon glyphicon-remove"></span> Smoking</li>
+
+        </ul>
+
+      </div>
+
+      <div class="alerts" style='display:inline-block; float:left; width:500px;height:300px;background-color:#FFFFA3;margin:20px 20px 0 20px'>
+        <div class="">
+          <table style='text-align:left; margin:0 auto; background-color:lightgrey; margin-bottom:5px'>
+            <tbody>
+              <tr>
+                <th rowspan="4"><span class="glyphicon glyphicon-alert" style='font-size:300%;'></span></th>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Schedule Change for 09/26 </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+        <div class="cal-table-container" style='border:1px solid purple; margin-bottom:5px'>
+          <table style='text-align:left; margin:0 auto; background-color:lightgrey'>
+            <tbody>
+              <tr>
+                <th rowspan="4"><span class="glyphicon glyphicon-calendar" style='font-size:300%;'></span></th>
+                <td>Next Scheduled Visit:</td>
+                <td>09/26 10:00am-1:30pm</td>
+              </tr>
+              <tr>
+                <td>Care Giver: Jimmy Rollins</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Following Appointment:</td>
+                <td>10/02 10:00am-1:30pm</td>
+              </tr>
+              <tr>
+                <td>Care Giver: Suzie Randall</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-container" style='border:1px solid black; border-radius:20px;bakcground-color:lightgrey'>
+          <table style='text-align:left; margin:0 auto; background-color:lightgrey'>
+            <tbody>
+              <tr>
+                <th rowspan="4"><span class="glyphicon glyphicon-pencil" style='font-size:300%;'></span></th>
+                <td>
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>New Note Added (09/27)</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Following Appointment:</td>
+                <td>10/02 10:00am-1:30pm</td>
+              </tr>
+              <tr>
+                <td>Care Giver: Suzie Randall</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
 
     </div>
+
+
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>

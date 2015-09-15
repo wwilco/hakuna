@@ -28,6 +28,19 @@
       .profile-table td {
         padding-right: 5px;
       }
+      .glyphicon-ok {
+        color:green;
+      }
+      .glyphicon-remove {
+        color:red;
+      }
+      th {
+        padding: 15px;
+        background-color:#99FFCC;
+      }
+      td {
+        padding:0 5px 0 5px;
+      }
 
     </style>
   </head>
@@ -118,6 +131,8 @@
                       <ol>
                         <li>Mock Data</li>
                         <li>Mock Data</li>
+                        <li>Mock Data</li>
+                        <li>Mock Data</li>
                       </ol>
                     </div>
                   </div>
@@ -128,8 +143,8 @@
                   </div>
                   <div id="accordian-care-recip" class="accordion-body collapse in">
                     <div class="accordion-inner">
+                      <input type="text" class="form-control" placeholder="Search">
                       <ol>
-                        <li><input type="text" class="form-control" placeholder="Search"></li>
                         <li>Mock Data</li>
                         <li>Mock Data</li>
                       </ol>
@@ -143,8 +158,8 @@
                   </div>
                   <div id="accordian-care-giver" class="accordion-body collapse in">
                     <div class="accordion-inner">
+                      <input type="text" class="form-control" placeholder="Search">
                       <ol style="list-style:none">
-                        <li><input type="text" class="form-control" placeholder="Search"></li>
                         <li>Mock Data</li>
                         <li>Mock Data</li>
                       </ol>
@@ -157,9 +172,9 @@
                   </div>
                   <div id="accordian-nurse" class="accordion-body collapse in">
                     <div class="accordion-inner">
+                      <input type="text" class="form-control" placeholder="Search">
                       <ol>
-                        <li><input type="text" class="form-control" placeholder="Search"></li>
-                        <li>Mock Data</li>
+                        <li><span class="glyphicon glyphicon-refresh" style="color:green"></span> Mock Data</li>
                         <li>Mock Data</li>
                       </ol>
                     </div>
@@ -192,11 +207,136 @@
           <!-- Tab Content -->
           <div class="tab-content" style="float:left; display:inline">
             <div role="tabpanel" class="tab-pane active" id="home">
-              <div class="alert alert-warning" role="alert">
-                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                <span class="sr-only">Yay!:</span>
-                Warnign!!!
+              <div class="" style="">
+                <a href="#" class="" style='display:inline'><span class="glyphicon glyphicon-minus"></span>Edit</a>
+                <table class='profile-table'>
+                  <tr>
+                    <td>
+                      <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcST4A450WfK4IAZY_IQGupqxaAhPLJ2qBmcos8lgmeSl0MjkZf5N7kkQw" alt="" style='display:block'/>
+                    </td>
+                    <td>
+                      <div class="care-recip" style='border:0px solid green'>
+                        <section>
+                          <h3>Harriet Smith 84 F</h3>
+                          <p>Address: 580 West End Ave <br>New York, NY 10024 <br> <span class="glyphicon glyphicon-earphone"></span> (212)345-6789 <br>Language: Spanish, English??? </p>
+                        </section>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="care-organizer" style="border-left:1px solid lightgrey;padding-left:5px;">
+                        <p> <h5>Primary Care Organizer : </h5>
+                          John Smith
+                          <br>
+                          Realtion: Son<br><span class="glyphicon glyphicon-earphone"></span><a href="tel:646-753-0987"> (212)345-6789 </a><br>
+                          <span class="glyphicon glyphicon-envelope"></span><a href="mailto:johnsmith@gmail.com" target='_blank'> johnsmith@gmail.com</a>
+                        </p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="care-team" style="border-left:1px solid lightgrey;padding-left:5px;">
+                        <p> <h5>Care Team : </h5> Care Giver : Hillary Somebody
+                          <br> Nurse : Someone Elsetoo
+                          <br>Case Owner : Will Wilcox <br>Case Organizer: John Smith, Jane Smith
+
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+
+                <div class="updates" style='display:inline-block; float:left; width:240px;height:400px;background-color:#FFFFA3;margin:20px 20px 0 20px;'>
+
+                  <h2 style='margin:0 auto; color:green; text-align:center; padding-top:5px'><u>Active</u></h2>
+                  <br>
+                  <ul style='list-style:none; margin-left:10%;'>
+                    <li><span class="glyphicon glyphicon-ok"></span> Dogs</li>
+                    <li><span class="glyphicon glyphicon-ok"></span> Music</li>
+                    <li><span class="glyphicon glyphicon-ok"></span> Cooking</li>
+                    <li><span class="glyphicon glyphicon-remove"></span> Cats</li>
+                    <li><span class="glyphicon glyphicon-remove"></span> Smoking</li>
+                  </ul>
+
+                </div>
+                <div class="alerts" style='display:inline-block; float:left; width:500px;height:400px;background-color:#FFFFA3;margin:20px 20px 0 20px'>
+                  <div class="">
+                    <table style='text-align:left; margin:0 auto; background-color:lightgrey; margin-bottom:5px'>
+                      <tbody>
+                        <tr>
+                          <th rowspan="4"><span class="glyphicon glyphicon-alert" style='font-size:300%;'></span></th>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Schedule Change for 09/26 </td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                  </div>
+                  <div class="cal-table-container" style='border:1px solid purple; margin-bottom:5px'>
+                    <table style='text-align:left; margin:0 auto; background-color:lightgrey'>
+                      <tbody>
+                        <tr>
+                          <th rowspan="4"><span class="glyphicon glyphicon-calendar" style='font-size:300%;'></span></th>
+                          <td>Next Scheduled Visit:</td>
+                          <td>09/26 10:00am-1:30pm</td>
+                        </tr>
+                        <tr>
+                          <td>Care Giver: Jimmy Rollins</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Following Appointment:</td>
+                          <td>10/02 10:00am-1:30pm</td>
+                        </tr>
+                        <tr>
+                          <td>Care Giver: Suzie Randall</td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="table-container" style='border:1px solid black; border-radius:20px;bakcground-color:lightgrey'>
+                    <table style='text-align:left; margin:0 auto; background-color:lightgrey'>
+                      <tbody>
+                        <tr>
+                          <th rowspan="4"><span class="glyphicon glyphicon-pencil" style='font-size:300%;'></span></th>
+                          <td>
+                          </td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>New Note Added (09/27)</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Following Appointment:</td>
+                          <td>10/02 10:00am-1:30pm</td>
+                        </tr>
+                        <tr>
+                          <td>Care Giver: Suzie Randall</td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+
+
+
               </div>
+
               <!-- <div class="form-group has-feedback">
                 <label for="inputTwitter" class="control-label">Twitter</label>
                 <div class="input-group">
@@ -396,45 +536,14 @@
             <div role="tabpanel" class="tab-pane" id="calendar">
               <form role="form" data-toggle="validator">
                 <div class="form-group">
-                  <div class="" style="border:1px solid purple; width:1000px; height:500px">
-                    <a href="#" class="" style='display:inline'><span class="glyphicon glyphicon-minus"></span>Edit</a>
-                    <table class='profile-table'>
-                      <tr>
-                        <td>
-                          <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcST4A450WfK4IAZY_IQGupqxaAhPLJ2qBmcos8lgmeSl0MjkZf5N7kkQw" alt="" style='display:block'/>
-                        </td>
-                        <td>
-                          <div class="care-recip" style='border:0px solid green'>
-                            <section>
-                              <h3>Harriet Smith 84 F</h3>
-                              <p>Address: 580 West End Ave <br>New York, NY 10024 <br> <span class="glyphicon glyphicon-earphone"></span> (212)345-6789</p>
-                            </section>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="care-organizer" style="border-left:1px solid lightgrey;padding-left:5px;">
-                            <p> <h5>Primary Care Organizer : </h5>
-                              John Smith
-                              <br>
-                              Realtion: Son<br><span class="glyphicon glyphicon-earphone"></span><a href="tel:646-753-0987"> (212)345-6789 </a><br>
-                              <span class="glyphicon glyphicon-envelope"></span><a href="mailto:johnsmith@gmail.com" target='_blank'> johnsmith@gmail.com</a>
-                            </p>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="care-team" style="border-left:1px solid lightgrey;padding-left:5px;">
-                            <p> <h5>Care Team : </h5> Care Giver : Hillary Somebody
-                              <br> Nurse : Someone Elsetoo
-                              <br>Case Owner : Will Wilcox <br>Case Organizer: John Smith, Jane Smith
-
-                            </p>
-                          </div>
-                        </td>
-                      </tr>
-                    </table>
-
-
+                  <div class="alert alert-warning" role="alert">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    <span class="sr-only">Yay!:</span>
+                    Warnign!!!
                   </div>
+
+
+
 
                 </div>
               </form>
@@ -444,6 +553,11 @@
             <div role="tabpanel" class="tab-pane" id="settings">
               <form role="form" data-toggle="validator">
                 <div class="form-group">
+                  <div class="alert alert-warning" role="alert">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    <span class="sr-only">Yay!:</span>
+                    Warnign!!!
+                  </div>
 
                 </div>
               </form>
