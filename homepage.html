@@ -3,54 +3,14 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type='text/css' href="homepage-style.css" media="screen" title="no title" charset="utf-8">
     <title></title>
-    <style media="screen">
-    body {
-      box-sizing: border-box;
-    }
-
-      .navbar {
-        margin-bottom:5px;
-      }
-      .contentView {
-        display:inline;
-      }
-      button {
-        position:fixed;
-        bottom:0;
-        left:0;
-      }
-
-      /*profile tab */
-      h3, h5 {
-        line-height:10%;
-      }
-      .profile-table td {
-        padding-right: 5px;
-      }
-      .glyphicon-ok {
-        color:green;
-      }
-      .glyphicon-remove {
-        color:red;
-      }
-      th {
-        padding: 15px;
-        background-color:#99FFCC;
-      }
-      td {
-        padding:0 5px 0 5px;
-      }
-
-    </style>
   </head>
   <body>
-
+    <!-- TOP NAV BAR -->
     <div class="container-fluid">
       <nav class="navbar navbar-default">
-        <!-- <div class="container-fluid"> -->
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
+        <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
@@ -59,17 +19,16 @@
             </button>
             <a class="navbar-brand" href="#">Hakuna</a>
           </div>
-          <!-- Collect the nav links, forms, and other content for toggling -->
+          <!-- Navbar ... Toggle-->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
+              <!-- Nav Search  -->
               <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Search">
+                  <input type="text" class="form-control" placeholder="Search DB">
                 </div>
-                <!-- <button type="submit" class="btn btn-default">Submit</button> -->
               </form>
-              <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
-              <!-- <li><a href="#">DataBase</a></li> -->
+              <!-- Database -->
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">DataBase<span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -82,6 +41,7 @@
                   <li><a href="#">Health Pros</a></li>
                 </ul>
               </li>
+              <!-- Notifications -->
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Notifications<span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -92,9 +52,8 @@
                 </ul>
               </li>
             </ul>
-
+            <!-- Login -->
             <ul class="nav navbar-nav navbar-right">
-              <!-- <li><a href="#">Link</a></li> -->
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login<span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -108,10 +67,8 @@
             </ul>
           </div><!-- /.navbar-collapse -->
       </nav>
-
-
-      <!-- Side Nav -->
-    	<div class="row" style='margin-left:5%'>
+      <!-- SIDE NAVIGATION -->
+    	<div class="row side-nav">
     		<div class="col-sm-4 col-md-3 sidebar">
           <div class="mini-submenu">
               <span class="icon-bar"></span>
@@ -128,12 +85,12 @@
                   </div>
                   <div id="accordian-recent-view" class="accordion-body collapse in">
                     <div class="accordion-inner">
-                      <ol>
+                      <ul class='side-nav-list'>
                         <li>Mock Data</li>
                         <li>Mock Data</li>
                         <li>Mock Data</li>
                         <li>Mock Data</li>
-                      </ol>
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -144,14 +101,13 @@
                   <div id="accordian-care-recip" class="accordion-body collapse in">
                     <div class="accordion-inner">
                       <input type="text" class="form-control" placeholder="Search">
-                      <ol>
+                      <ul class='side-nav-list'>
                         <li>Mock Data</li>
                         <li>Mock Data</li>
-                      </ol>
+                      </ul>
                     </div>
                   </div>
                 </div>
-
                 <div class="accordion-group">
                   <div class="accordion-heading">
                     <a class="accordion-toggle list-group-item" data-toggle="collapse" data-parent="#accordion2" href="#accordian-care-giver">Care Givers</a>
@@ -159,38 +115,34 @@
                   <div id="accordian-care-giver" class="accordion-body collapse in">
                     <div class="accordion-inner">
                       <input type="text" class="form-control" placeholder="Search">
-                      <ol style="list-style:none">
+                      <ul class='side-nav-list'>
                         <li>Mock Data</li>
                         <li>Mock Data</li>
-                      </ol>
+                      </ul>
                     </div>
                   </div>
                 </div>
                 <div class="accordion-group">
                   <div class="accordion-heading">
-                    <a class="accordion-toggle list-group-item" data-toggle="collapse" data-parent="#accordion2" href="#accordian-nurse">Nurses<span class="badge">14</span></a>
+                    <a class="accordion-toggle list-group-item" data-toggle="collapse" data-parent="#accordion2" href="#accordian-nurse">Nurses<span class="badge">1</span></a>
                   </div>
                   <div id="accordian-nurse" class="accordion-body collapse in">
                     <div class="accordion-inner">
                       <input type="text" class="form-control" placeholder="Search">
-                      <ol>
+                      <ul class='side-nav-list'>
                         <li><span class="glyphicon glyphicon-refresh" style="color:green"></span> Mock Data</li>
                         <li>Mock Data</li>
-                      </ol>
+                      </ul>
                     </div>
                   </div>
                 </div>
-
                 <a href="#" class="list-group-item" style='margin-top:10px'>
                     <span class="glyphicon glyphicon-plus"></span> Create New Profile
                 </a>
               </div> <!-- End accordian list -->
           </div>
         </div>
-    	<!-- </div> -->
-
       <!-- Nav Tabs -->
-      <!-- <div class="row" style='border:1px solid purple; display:inline-block; float:left'> -->
         <div class='contentView' style='position:fixed'>
           <nav>
             <ul class="nav nav-tabs" role="tablist">
@@ -205,18 +157,18 @@
           </nav>
 
           <!-- Tab Content -->
-          <div class="tab-content" style="float:left; display:inline">
+          <div class="tab-content">
             <div role="tabpanel" class="tab-pane active" id="home">
-              <div class="" style="">
-                <a href="#" class="" style='display:inline'><span class="glyphicon glyphicon-chevron-left"></span>Back</a>
-                <a href="#" class="" style='display:inline; float:right'><span class="glyphicon glyphicon-pencil"></span>Edit</a>
+              <div class="">
+                <a href="#" class="back-button"><span class="glyphicon glyphicon-chevron-left"></span>Back</a>
+                <a href="#" class="edit-button"><span class="glyphicon glyphicon-pencil"></span>Edit</a>
                 <table class='profile-table'>
                   <tr>
                     <td>
-                      <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcST4A450WfK4IAZY_IQGupqxaAhPLJ2qBmcos8lgmeSl0MjkZf5N7kkQw" alt="" style='display:block'/>
+                      <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcST4A450WfK4IAZY_IQGupqxaAhPLJ2qBmcos8lgmeSl0MjkZf5N7kkQw" alt=""/>
                     </td>
                     <td>
-                      <div class="care-recip" style='border:0px solid green'>
+                      <div class="care-recip">
                         <section>
                           <h3>Harriet Smith 84 F</h3>
                           <p>Address: 580 West End Ave <br>New York, NY 10024 <br> <span class="glyphicon glyphicon-earphone"></span> (212)345-6789 <br>Language: Spanish, English??? </p>
@@ -224,46 +176,43 @@
                       </div>
                     </td>
                     <td>
-                      <div class="care-organizer" style="border-left:1px solid lightgrey;padding-left:5px;">
+                      <div class="care-organizer care-side-bar">
                         <p> <h5>Primary Care Organizer : </h5>
-                          John Smith
-                          <br>
+                          John Smith <br>
                           Realtion: Son<br><span class="glyphicon glyphicon-earphone"></span><a href="tel:646-753-0987"> (212)345-6789 </a><br>
                           <span class="glyphicon glyphicon-envelope"></span><a href="mailto:johnsmith@gmail.com" target='_blank'> johnsmith@gmail.com</a>
                         </p>
                       </div>
                     </td>
                     <td>
-                      <div class="care-team" style="border-left:1px solid lightgrey;padding-left:5px;">
+                      <div class="care-team care-side-bar">
                         <p> <h5>Care Team : </h5> Care Giver : Hillary Somebody
                           <br> Nurse : Someone Elsetoo
-                          <br>Case Owner : Will Wilcox <br>Case Organizer: John Smith, Jane Smith
-
+                          <br>Case Owner : Will Wilcox
+                          <br>Case Organizer: John Smith, Jane Smith
                         </p>
                       </div>
                     </td>
                   </tr>
                 </table>
-
-                <div class="updates" style='display:inline-block; float:left; width:240px;height:400px;background-color:#FFFFA3;margin:20px 20px 0 20px;'>
-
-                  <h2 style='margin:0 auto; color:green; text-align:center; padding-top:5px'><u>Active</u></h2>
-                  <br>
-                  <ul style='list-style:none; margin-left:10%;'>
+                <!-- Active/Inactive Section -->
+                <div class="updates">
+                  <h2><u>Active</u></h2><br>
+                  <ul>
                     <li><span class="glyphicon glyphicon-ok"></span> Dogs</li>
                     <li><span class="glyphicon glyphicon-ok"></span> Music</li>
                     <li><span class="glyphicon glyphicon-ok"></span> Cooking</li>
                     <li><span class="glyphicon glyphicon-remove"></span> Cats</li>
                     <li><span class="glyphicon glyphicon-remove"></span> Smoking</li>
                   </ul>
-
                 </div>
-                <div class="alerts" style='display:inline-block; float:left; width:500px;height:400px;background-color:#FFFFA3;margin:20px 20px 0 20px'>
-                  <div class="">
-                    <table style='text-align:left; margin:0 auto; background-color:lightgrey; margin-bottom:5px; border-radius:20px;'>
+                <!-- Alerts/Schedule Section -->
+                <div class="alerts">
+                  <div class="alerts-table-div">
+                    <table class='alert-table'>
                       <tbody>
-                        <tr style='border-radius:20px'>
-                          <th rowspan="4"><span class="glyphicon glyphicon-alert" style='font-size:300%'></span></th>
+                        <tr>
+                          <th rowspan="4"><span class="glyphicon glyphicon-big glyphicon-alert"></span></th>
                           <td></td>
                           <td></td>
                         </tr>
@@ -281,13 +230,13 @@
                         </tr>
                       </tbody>
                     </table>
-
                   </div>
-                  <div class="cal-table-container" style='border:1px solid purple; margin-bottom:5px'>
-                    <table style='text-align:left; margin:0 auto; background-color:lightgrey'>
+
+                  <div class="alerts-table-div">
+                    <table class='alert-table'>
                       <tbody>
                         <tr>
-                          <th rowspan="4"><span class="glyphicon glyphicon-calendar" style='font-size:300%;'></span></th>
+                          <th rowspan="4"><span class="glyphicon glyphicon-big glyphicon-calendar"></span></th>
                           <td>Next Scheduled Visit:</td>
                           <td>09/26 10:00am-1:30pm</td>
                         </tr>
@@ -307,13 +256,12 @@
                     </table>
                   </div>
 
-                  <div class="table-container" style='border:1px solid black; border-radius:20px;bakcground-color:lightgrey'>
-                    <table style='text-align:left; margin:0 auto; background-color:lightgrey'>
+                  <div class="alerts-table-div">
+                    <table class='alert-table'>
                       <tbody>
                         <tr>
-                          <th rowspan="4"><span class="glyphicon glyphicon-pencil" style='font-size:300%;'></span></th>
-                          <td>
-                          </td>
+                          <th rowspan="4"><span class="glyphicon glyphicon-big glyphicon-pencil"></span></th>
+                          <td></td>
                           <td></td>
                         </tr>
                         <tr>
@@ -332,19 +280,7 @@
                     </table>
                   </div>
                 </div>
-
-
-
-
               </div>
-
-              <!-- <div class="form-group has-feedback">
-                <label for="inputTwitter" class="control-label">Twitter</label>
-                <div class="input-group">
-                  <span class="input-group-addon">@</span>
-                  <input type="text" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" id="inputTwitter" placeholder="1000hz" >
-                </div>
-              </div> -->
             </div>
             <!-- Messages -->
             <div role="tabpanel" class="tab-pane" id="profile">
