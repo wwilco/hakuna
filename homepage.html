@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" type='text/css' href="homepage-style.css" media="screen" title="no title" charset="utf-8">
-    <title></title>
+    <title>homepage</title>
   </head>
   <body>
     <!-- TOP NAV BAR -->
@@ -146,19 +146,19 @@
         <div class='contentView' style='position:fixed'>
           <nav>
             <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Profile</a></li>
-              <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Health</a></li>
-              <li role="presentation"><a href="#calendar" aria-controls="calender" role="tab" data-toggle="tab">Calender</a></li>
-              <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">CareTeam</a></li>
-              <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">CareLogs</a></li>
-              <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Billing</a></li>
-              <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Forms</a></li>
+              <li role="presentation" class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+              <li role="presentation"><a href="#healthinfo" aria-controls="healthinfo" role="tab" data-toggle="tab">Health</a></li>
+              <li role="presentation"><a href="#calendar" aria-controls="calendar" role="tab" data-toggle="tab">Calender</a></li>
+              <li role="presentation"><a href="#careteam" aria-controls="careteam" role="tab" data-toggle="tab">CareTeam</a></li>
+              <li role="presentation"><a href="#carelogs" aria-controls="carelogs" role="tab" data-toggle="tab">CareLogs</a></li>
+              <li role="presentation"><a href="#billing" aria-controls="billing" role="tab" data-toggle="tab">Billing</a></li>
+              <li role="presentation"><a href="#allforms" aria-controls="allforms" role="tab" data-toggle="tab">Forms</a></li>
             </ul>
           </nav>
 
           <!-- Tab Content -->
           <div class="tab-content">
-            <div role="tabpanel" class="tab-pane active" id="home">
+            <div role="tabpanel" class="tab-pane active" id="profile">
               <div class="">
                 <a href="#" class="back-button"><span class="glyphicon glyphicon-chevron-left"></span>Back</a>
                 <a href="#" class="edit-button"><span class="glyphicon glyphicon-pencil"></span>Edit</a>
@@ -236,7 +236,7 @@
                     <table class='alert-table'>
                       <tbody>
                         <tr>
-                          <th rowspan="4"><span class="glyphicon glyphicon-big glyphicon-calendar"></span></th>
+                          <th rowspan="4"><a href="#calendar" aria-controls="true" role="tab" data-toggle="tab" style='text-decoration:none'><span class="glyphicon glyphicon-big glyphicon-calendar"></span></a></th>
                           <td>Next Scheduled Visit:</td>
                           <td>09/26 10:00am-1:30pm</td>
                         </tr>
@@ -260,7 +260,7 @@
                     <table class='alert-table'>
                       <tbody>
                         <tr>
-                          <th rowspan="4"><span class="glyphicon glyphicon-big glyphicon-pencil"></span></th>
+                          <th rowspan="4"><a href="#carelogs" aria-controls="true" role="tab" data-toggle="tab" style='text-decoration:none'><span class="glyphicon glyphicon-big glyphicon-pencil"></span></a></th>
                           <td></td>
                           <td></td>
                         </tr>
@@ -283,7 +283,7 @@
               </div>
             </div>
             <!-- Messages -->
-            <div role="tabpanel" class="tab-pane" id="profile">
+            <div role="tabpanel" class="tab-pane" id="healthinfo">
               <div class="alert alert-danger" role="alert" style="max-width:70%">
                 <div class="container">
 
@@ -476,59 +476,45 @@
                   <div class="alert alert-warning" role="alert">
                     <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                     <span class="sr-only">Yay!:</span>
-                    Warnign!!!
+                    Calendar
                   </div>
-
-
-
-
                 </div>
               </form>
             </div>
 
-
-            <div role="tabpanel" class="tab-pane" id="settings">
-              <form role="form" data-toggle="validator">
-                <div class="form-group">
-                  <div class="alert alert-warning" role="alert">
-                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                    <span class="sr-only">Yay!:</span>
-                    Warnign!!!
-                  </div>
-
-                </div>
-              </form>
+            <div role="tabpanel" class="tab-pane" id="careteam">
+              <h3>Care Team</h3>
             </div>
 
-            <!-- <div role="tabpanel" class="tab-pane" id="profile">
-              <div class="alert alert-danger" role="alert">
-                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                <span class="sr-only">Error:</span>
-                Enter a valid email address
-              </div>
-            </div> -->
+            <div role="tabpanel" class="tab-pane" id="carelogs">
+              <h3>Care Logs</h3>
+            </div>
+
           </div> <!-- end: Tab Content -->
 
+        </div> <!-- End: contentView -->
 
+      </div> <!-- End: SideNav row -->
 
-        </div>
-
-
-
-      </div>
-
-      <!-- <button type="" name="">Create New Profile</button> -->
-
-    </div> <!-- container -->
+    </div> <!-- End: container -->
 
 
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   <script type="text/javascript">
+  // hide side nav accordians
   $('#accordian-care-recip').collapse("hide");
   $('#accordian-care-giver').collapse("hide");
   $('#accordian-nurse').collapse("hide");
+  // change Tab from alternate link
+  $(function(){
+      $(document).on('click.bs.tab.data-api', '[data-toggle="tab"], [data-toggle="pill"]', function (e) {
+        e.preventDefault()
+        $('ul.nav li a[href="' + $(this).attr('href') + '"]').tab('show');
+     })
+   });
+
 
   </script>
 </html>
