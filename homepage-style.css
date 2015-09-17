@@ -22,7 +22,8 @@ button {
 /*Tab content*/
 .tab-content {
   float:left;
-  display:inline
+  display:inline;
+  max-width:100%;
 }
 .edit-button {
   float:right;
@@ -35,28 +36,34 @@ button {
 .updates {
   display:inline-block;
   float:left;
-  width:240px;
+  width:40%;
   height:400px;
   background-color:#FFFFA3;
-  margin:20px 20px 0 20px;
+  /*margin:20px 20px 0 20px;*/
+  box-sizing: border-box;
+  border:1px solid pink;
 }
-.updates h2 {
+.updates h4 {
   margin:0 auto;
-  color:green;
+  /*color:green;*/
   text-align:center;
   padding-top:5px
 }
 .updates ul {
   list-style:none;
-  margin-left:10%;
+  /*margin-left:10%;*/
 }
 .alerts {
+  box-sizing: border-box;
   display:inline-block;
   float:left;
-  width:500px;
+  width:50%;
   height:400px;
   background-color:#FFFFA3;
-  margin:20px 20px 0 20px
+  margin-left:3%;
+  /*margin:0 20px 0 0;*/
+  border:1px solid blue;
+
 }
 .alert-table {
   text-align:left;
@@ -86,8 +93,10 @@ h3, h5 {
 .glyphicon-remove {
   color:red;
 }
-th {
+th .glyphicon-big{
   padding: 15px;
+}
+.th-glyph {
   background-color:#99FFCC;
 }
 td {

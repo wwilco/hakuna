@@ -71,6 +71,8 @@
 
       <p id="demo"></p>
 
+      <h3 id='user-age'></h3>
+
 
   </body>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
@@ -86,5 +88,9 @@
 
     var timeStamp = moment().format('ddd MMM D, h:mma');
     document.getElementById("timeStamp").innerHTML = timeStamp;
+
+    // calulate age
+    var age = moment().diff(moment('1988-11-17', 'YYYY-MM-DD'), 'years');
+    document.getElementById("user-age").innerHTML = age;
   </script>
 </html>
