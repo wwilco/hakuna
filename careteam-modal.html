@@ -6,15 +6,20 @@
     <link rel="stylesheet" type='text/css' href="homepage-style.css" media="screen" title="no title" charset="utf-8">
     <title>careteam modal</title>
     <style media="screen">
-    table tr td{
+    table tr td {
       border:1px solid lightgrey;
-      padding: 5px;
+      padding: 3px;
     }
     table tr td:last-child {
       border-style:none;
     }
-    td {
-      /*padding-bottom: 25px;*/
+    table td:first-child {
+      /*want to remove padding-right within 'COw' column */
+    }
+    table {
+      table-layout: auto;
+      border-collapse: collapse;
+      width: 70%;
     }
     .modal-footer, .modal-body {
       text-align:center;
@@ -178,25 +183,27 @@
         <div class="row careteam-row">
           <div class=".col-md-12">
             <table>
-              <th>Care Recipient: Jenny Thompson</th>
+              <th colspan="3">Care Recipient: Jenny Thompson</th>
               <tr>
-                <td>Case Owner:Lucy Simms</td>
-                <td>Nurse:Harry Douglas</td>
-                <td>CareGiver:Sharon Lucas</td>
-                <td>CareOrganizer:Shawn Smith</td>
+                <td>COw:Lucy Somsonite</td>
+                <td>RN:Harry Douglas</td>
+                <td>CG:Sharon Lucas</td>
+                <td>COr:Shawn Thompson</td>
+                <td>CC:Shawn Smithspon</td>
                 <td>
-                  <button type="button" class="btn btn-xs btn-warning" data-toggle="modal" data-target="#edit">Edit</button>
+                  <button type="button" class="btn btn-xs btn-primary" data-toggle="modal" data-target="#edit">Add</button>
                   <button type="button" class="btn btn-xs btn-danger" data-toggle="modal" data-target="#delete">Delete</button>
                 </td>
               </tr>
-              <th>Care Recipient: Harriet Smith</th>
+              <th colspan="3">Care Recipient: Harriet Smith</th>
               <tr>
-                <td>Case Owner:Lucy Simms</td>
-                <td>Nurse:Harry Douglas</td>
-                <td>CareGiver:Sharon Lucas</td>
-                <td>CareOrganizer:Shawn Smith</td>
+                <td>COw:Lucy Simms</td>
+                <td>RN:Harry Douglas</td>
+                <td>CG:Sharon Lucas</td>
+                <td>COr:Shawn Smith</td>
+                <td>CC:Shawn Smithspon</td>
                 <td>
-                  <button type="button" class="btn btn-xs btn-warning" data-toggle="modal" data-target="#edit">Edit</button>
+                  <button type="button" class="btn btn-xs btn-primary" data-toggle="modal" data-target="#edit">Add</button>
                   <button type="button" class="btn btn-xs btn-danger" data-toggle="modal" data-target="#delete">Delete</button>
                 </td>
               </tr>
@@ -210,10 +217,10 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Edit Care Team</h4>
+                <h4 class="modal-title">Add Member Care Team</h4>
               </div>
               <div class="modal-body">
-                <p>Which member of the care team would you like to change?</p>
+                <p>Which member of the care team would you like to add?</p>
                 <button type="button" class="btn btn-primary" data-dismiss="modal">CareGiver</button>
                 or
                 <button type="button" class="btn btn-success" data-dismiss="modal">Nurse</button>
@@ -232,15 +239,21 @@
               <div class="modal-body">
                 <p>Which member of the care team would you like to remove?</p>
                 <div class="">
-                  <fieldset>
+                  <fieldset style="text-align:left; padding-left:25%;">
                     <input type="radio" name="careteam" value="Y"/>
-                    <label for="yes">Nurse</label>
+                    <label for="yes">Nurse:Name Name</label>
+                    <br>
                     <input type="radio" name="careteam" value="N"/>
-                    <label for="no">Care Giver</label>
+                    <label for="no">Care Giver:Name Name</label>
+                    <br>
                     <input type="radio" name="careteam" value="N"/>
-                    <label for="no">Case Owner</label>
+                    <label for="no">Case Owner: Name Name</label>
+                    <br>
                     <input type="radio" name="careteam" value="N"/>
-                    <label for="no">Primary Case Organizer</label>
+                    <label for="no">Primary Case Organizer:Name Name</label>
+                    <br>
+                    <input type="radio" name="careteam" value="N"/>
+                    <label for="no">Case Coordinator:Name Name</label>
                   </fieldset>
                 </div>
               </div>
