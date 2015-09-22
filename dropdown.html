@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>gender</title>
+</head>
+<body>
+  <h5>Gender</h5>
+  <select id="gender" name="gender">
+    <option></option>
+    <option value="M">Male</option>
+    <option value="F">Female</option>
+    <option value="N/A">Other</option>
+  </select>
+  <select id="state" >
+    <option value="NY">New York</option>
+  </select>
+
+  <fieldset id="smoke" style='border-bottom:1px solid lightgrey'>
+      <label style='padding-right:15px' for="smoker">Smoker</label>
+      <input type="radio" name="smoker" value="Yes"/>
+      <label for="Yes">Yes</label>
+      <input type="radio" name="smoker" value="No"/>
+      <label for="No">No</label>
+  </fieldset>
+  <button onclick="getInfo()">Click</button>
+</body>
+<script>
+function getInfo(){
+  getGender();
+  getState();
+  getSmoke();
+}
+
+function getGender(){
+  var gender = document.getElementById('gender');
+  var genderSelect = gender.options[gender.selectedIndex].value;
+  console.log(genderSelect);
+}
+function getState(){
+  var state = document.getElementById('state');
+  var stateSelect = state.options[state.selectedIndex].value;
+  console.log(stateSelect);
+}
+function getSmoke(){
+  document.querySelector('input[name="smoker"]:checked').value;
+}
+
+
+
+
+
+
+
+
+</script>
+</html>
