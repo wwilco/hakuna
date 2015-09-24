@@ -6,17 +6,18 @@
     <link rel="stylesheet" type='text/css' href="homepage-style.css" media="screen" title="no title" charset="utf-8">
     <title>careteam modal</title>
     <style media="screen">
-    table tr td {
+    .careTeamTable tr td {
       border:1px solid lightgrey;
       padding: 3px;
+      text-align: center;
     }
-    table tr td:last-child {
+    .careTeamTable tr td:last-child {
       border-style:none;
     }
-    table td:first-child {
+    .careTeamTable td:first-child {
       /*want to remove padding-right within 'COw' column */
     }
-    table {
+    .careTeamTable {
       table-layout: auto;
       border-collapse: collapse;
       width: 70%;
@@ -182,7 +183,7 @@
         <h2>Care Teams</h2>
         <div class="row careteam-row">
           <div class=".col-md-12">
-            <table>
+            <table class='careTeamTable'>
               <th colspan="3">Care Recipient: Jenny Thompson</th>
               <tr>
                 <td>COw:Lucy Somsonite</td>
@@ -262,7 +263,6 @@
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
               </div>
             </div>
-
           </div>
         </div>
 
