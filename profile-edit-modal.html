@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+    <div id="editMod" class="modal fade" role="dialog">
+    <div class="modal-dialog" style="width:70%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Edit Profile</h4>
+                <button style="" type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+            </div>
+            <div class="modal-body" style="border-box:box-sizing">
+                <div class="row">
+                    <div class="col-md-6 col-xs-12" style="padding-left:10%">
+                        <h5>Full Name</h5>
+                        <input type="text" placeholder="First" name="first_name" value=''>
+                        <input type="text" placeholder="Last" name="last_name" value=''>
+                        <h5>Phone Number</h5>
+                        <input type="text" placeholder="1234567890" name="phone" value=''>
+                        <h5>E-mail</h5>
+                        <input type="email" name="email" placeholder="somethingemail.com" name="email" value='' style="width:60%">
+                        <h5>Date of Birth</h5>
+                        <input type="date" name="date_of_birth" value=''/>
+                        <h5>Gender</h5>
+                        <select id="gender" name="gender" value=''>
+                            <option></option>
+                            <option value="F">Female</option>
+                            <option value="M">Male</option>
+                            <option value="N/A">Other</option>
+                        </select>
+                    </div> <!--Col-md-6-->
+                    <div class="col-md-6 col-xs-12">
+                        <h5>Address:</h5>
+                        <table>
+                            <tr>
+                                <td><input type="text" name="address.street" value='' style="width:200%"></td>
+                            </tr>
+                            <tr><td>Street Address 1</td></tr>
+                            <tr><td><input type="text" name="" value="" style="width:200%"></td></tr>
+                            <tr><td>Street Address 2</td></tr>
+                            <tr>
+                                <td><input type="text" name="address.city" value=''></td>
+                                <td>
+                                    <select id="statePicker" name="address.state" value=''>
+                                        <option></option>
+                                        <option value="NY">New York</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>City</td>
+                                <td>State/Province</td>
+                            </tr>
+                            <tr>
+                                <td><input type="number" name="address.zip_code" value=''></td>
+                                <td><select id="countryPicker" name="">
+                                    <option value="USA">United States</option>
+                                </select></td>
+                            </tr>
+                            <tr>
+                                <td>Postal/Zip Code</td>
+                                <td>Country</td>
+                            </tr>
+                        </table>
+                    </div><!--Col-md-6-->
+                </div> <!--Row-->
+
+                <div style="padding-top:1%;padding-left:10%">
+                    <table style="">
+                        <tr><td><h5>Emergency Contact Name</h5></td>
+                            <td><h5>Emergency Contact Phone</h5></td>
+                            <td><h5>Emergency Contact Relation</h5></td>
+                        </tr>
+                        <tr><td><input type="text" name="emergency_contact" value='' placeholder="Full Name"/></td>
+                            <td><input type="text" name="emergency_contact_phone" value='' placeholder="1234567890"/></td>
+                            <td><input type="text" name="emergency_relationship" value="" placeholder="Grandson"/></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <br/>
+                <div>
+                    <table>
+                        <tr>
+                            <td><b>Likes</b></td>
+                            <td><b>Dislikes</b></td></tr>
+                        <tr>
+                            <td><textarea name="likes" value='' cols="40" rows="3"></textarea></td>
+                            <td><textarea name="dislikes" value='' cols="40" rows="3"></textarea></td>
+                        </tr>
+                    </table>
+                    <fieldset value='' style='border-bottom:1px solid lightgrey'>
+                        <label style='padding-right:15px' for="smoker">Are they a Smoker?</label>
+                        <input type="radio" name="smokes" value="Yes"/>
+                        <label for="Yes">Yes</label>
+                        <input type="radio" name="smokes" value="No"/>
+                        <label for="No">No</label>
+                    </fieldset>
+
+                    <fieldset value=''>
+                        <label style='padding-right:20px' for="pet">Do they have Pets?</label>
+                        <input type="radio" name="pets" value="Yes"/>
+                        <label for="Yes">Yes</label>
+                        <input type="radio" name="pets" value="No"/>
+                        <label for="No">No</label>
+                        <p>
+                            If yes, <input type="text" name="pets" value='' placeholder="what kind of pet?">
+                        </p>
+                    </fieldset>
+                    <h5>What Language(s) does Care Recipient Speak? </h5>
+                    <input type="text" name="preferred_language" value='' style="width:30%" placeholder="English, Spanish, Russian..."/>
+                    <br/>
+                    <h5 style="margin-top:2%">Does Care Recipient require a <b>CAR</b> for care service?</h5>
+                    <fieldset value=''>
+                        <input type="radio" name="requires_car" value="Yes"/>
+                        <label for="yes">Yes</label>
+                        <input type="radio" name="requires_car" value="No"/>
+                        <label for="no">No</label>
+                    </fieldset>
+                    <h5>What is their Mobility Status</h5>
+                    <select name="mobility" value='' id="mobilityPicker">
+                        <option value=""></option>
+                        <option value="without Help">w/o Help</option>
+                        <option value="without Cane">w/ Cane</option>
+                        <option value="with Walker">w/ Walker</option>
+                        <option value="with Wheelchair">w/ Wheelchair</option>
+                        <option value="with Personal Assist">w/ Personal Assist</option>
+                        <option value="with Crutches">w/ Crutches</option>
+                        <option value="Ambulate Indoors">Ambulate Indoors</option>
+                        <option value="Ambulate Indoors & Outdoors">Ambulate Indoors & Outdoors</option>
+                    </select>
+                    <select>
+                        <option value=""></option>
+                        <option value="">LIRR-Train</option>
+                        <option value="">MetroNorth-Train</option>
+                        <option value="">MTA-Subway</option>
+                        <option value="">Bus</option>
+                    </select>
+                    <input type="text" name="nearest_transport" value='' placeholder="Station Name"/>
+                    <h5>Assign Care Coordinator</h5>
+                    <select name="case_owner" value='' id="careCoordinator">
+                        <option value="GUO, Steven">GUO, Steven</option>
+                        <option value="KAO, Taryn">KAO, Taryn</option>
+                        <option value="HADO, Edem">HADO, Edem</option>
+                        <option value="LIM, Dan">LIM, Dan</option>
+                        <option value="TOYOSHIMA, Joe">TOYOSHIMA, Joe</option>
+                    </select>
+                    <h5>Set Client/Lead Status to...</h5>
+                    <select name="lead_status" value='' id="leadStatus">
+                        <option value=""></option>
+                        <option value="Active">Active</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Inactive">Inactive</option>
+                    </select>
+                    <h5>Any additional information and/or Alerts?</h5>
+                    <textarea name="special_alerts" value='' cols="60" rows="5"></textarea>
+                    <div style="padding-top:1%">
+                        <table style="margin-left:-5px">
+                            <tr><td><h5>Referral Source</h5></td>
+                                <td><h5>Referral Contact</h5></td>
+                            </tr>
+                            <tr><td><input type="text" name="referral_source" value='' placeholder="Google"/></td>
+                                <td><input type="text" name="referral_contact" value='' placeholder="Full Name"/></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+  </body>
+</html>

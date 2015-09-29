@@ -255,6 +255,11 @@
                     <br>
                     <input type="radio" name="careteam" value="N"/>
                     <label for="no">Case Coordinator:Name Name</label>
+
+                    <div id="showinput" style="display:none">
+                      <h5>Reason for Removal?</h5>
+                      <textarea name="name" rows="2" cols="40"></textarea>
+                    </div>
                   </fieldset>
                 </div>
               </div>
@@ -285,6 +290,12 @@
         $('ul.nav li a[href="' + $(this).attr('href') + '"]').tab('show');
      })
    });
+
+   var modal = document.getElementById('delete');
+   modal.addEventListener('click', function(){
+     var input = document.getElementById("showinput");
+     input.setAttribute('style', 'display:inline');
+   })
 
 
   </script>

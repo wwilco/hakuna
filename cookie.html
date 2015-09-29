@@ -1,0 +1,73 @@
+<html>
+<head>
+<script type="text/javascript">
+
+	var saveString = "";
+
+	function getCookie(isName){
+
+		var cookieStr = document.cookie;
+		var startSlice = cookieStr.indexOf(isName+"=");
+		if (startSlice == -1){return false}
+		var endSlice = cookieStr.indexOf(";",startSlice+1)
+		if (endSlice == -1){endSlice = cookieStr.length}
+		var isData = cookieStr.substring(startSlice,endSlice)
+		var isValue = isData.substring(isData.indexOf("=")+1,isData.length);
+		return isValue;
+	}
+
+	function saveForm(){
+
+		var saveString = "";
+		var nText = document.getElementsByTagName('input');
+		for (i=0; i<nText.length-1; i++ )
+			{saveString += nText[i].value+":"}
+		var isIdx = document.forms[0]['report'].selectedIndex;
+		saveString = saveString+isIdx;
+		document.cookie = "formData="+saveString+"";
+	}
+
+	function restoreValues(){
+
+		var nValues = getCookie('formData');
+		var n = 0;
+		if (nValues)
+			{
+			 //alert(nValues)
+			 var isIndex = nValues.substring(nValues.length-1,nValues.length);
+			 document.forms[0]['report'].selectedIndex = isIndex;
+			 var nForm = document.forms[0];
+			 nValues = nValues.substring(0,nValues.length-1);
+			 var isText = nValues.split(":");
+			 	for (i=0; i<nForm.length; i++)
+					{
+					 if (nForm[i].type == "text")
+						{nForm[i].value = isText[n++]}
+					}
+			}
+		}
+
+		onload=restoreValues;
+		onbeforeunload=saveForm;
+
+</script>
+</head>
+<body>
+
+<form>
+<select name='report'>
+<option> Make a selection</option>
+<option> Test 1 </option>
+<option> Test 2 </option>
+<option> Test 3 </option>
+</select>
+<br>
+<input type='text' name='one' size='6'></br>
+<input type='text' name='two' size='6'></br>
+<input type='text' name='three' size='6'></br>
+<br>
+<input type='submit' value='Submit'>
+</form>
+
+</body>
+</html>

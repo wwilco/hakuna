@@ -1,0 +1,25 @@
+
+.profile {
+    margin-left: 32px;
+}
+
+.profile:first-child > .danger {
+    display: none;
+}
+
+.phones label {
+    display: none;
+}
+
+.phones div:first-child label {
+    display: inline-block;
+}
+
+.manage {
+    margin-left: 32px;
+    margin-bottom: 20px;
+}
+
+.phone_template, .profile_template {
+    display: none;
+}

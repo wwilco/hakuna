@@ -16,3 +16,11 @@ btn.setAttribute("data-target", "add"[i]);
 
 var addbt = document.getElementById('add');
 addbt.setAttribute('id', 'add'[i]);
+
+var h1 = document.getElementsByTagName("H1")[0];
+var att = document.createAttribute("class");
+att.value = "democlass";
+h1.setAttributeNode(att);
+
+
+document.querySelector('input[name="car"]:checked').value;
