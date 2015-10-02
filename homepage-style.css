@@ -1,20 +1,25 @@
+/*this*/
 body {
   box-sizing: border-box;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: Helvetica,Arial,Verdana,sans-serif !important;
 }
+/*this*/
 .navbar {
-  margin-bottom:5px;
+  /*margin-bottom:5px;*/
+  margin: 0;
+  padding: 0;
 }
+/*this*/
 .contentView {
   display:inline;
+  position:absolute;
 }
-/*button {
-  position:fixed;
-  bottom:0;
-  left:0;
-}*/
+/*this*/
 /* side nav */
 .side-nav {
-  margin-left:5%;
+  margin-left:1%;
 }
 .side-nav-list {
   list-style: none;
@@ -31,7 +36,7 @@ body {
 /*profile tab */
 .care-side-bar {
   border-left:1px solid lightgrey;
-  padding-left:5px;
+  padding-left:1%;
 }
 .update-alert-container {
   display:inline-block;

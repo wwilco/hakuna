@@ -16,6 +16,7 @@
 
 body .fc { /* extra precedence to overcome jqui */
 	font-size: 1em;
+	font-family: Helvetica,Arial,Verdana,sans-serif;
 }
 
 
@@ -78,7 +79,7 @@ body .fc { /* extra precedence to overcome jqui */
 	font-size: 1em;
 	text-align: center;
 	overflow: hidden;
-	font-family: "Courier New", Courier, monospace;
+	font-family: Helvetica,Arial,Verdana,sans-serif;
 
 	/* don't allow browser text-selection */
 	-webkit-touch-callout: none;
@@ -179,7 +180,7 @@ NOTE: use percentage font sizes or else old IE chokes
 
 /* Firefox has an annoying inner border */
 .fc button::-moz-focus-inner { margin: 0; padding: 0; }
-	
+
 .fc-state-default { /* non-theme */
 	border: 1px solid;
 }
@@ -202,7 +203,7 @@ NOTE: use percentage font sizes or else old IE chokes
 	margin: 0 .2em;
 	vertical-align: middle;
 }
-	
+
 /*
   button states
   borrowed from twitter bootstrap (http://twitter.github.com/bootstrap/)
@@ -411,7 +412,7 @@ hr.fc-divider {
 	border-right: 0 hidden transparent;
 
 	/* no bottom borders on rows */
-	border-bottom: 0 hidden transparent; 
+	border-bottom: 0 hidden transparent;
 }
 
 .fc-row:first-child table {
@@ -702,7 +703,7 @@ a.fc-more:hover {
 .fc .fc-toolbar > * > :first-child { /* extra precedence to override button border margins */
 	margin-left: 0;
 }
-	
+
 /* title text */
 
 .fc-toolbar h2 {
@@ -719,7 +720,7 @@ a.fc-more:hover {
 .fc-toolbar .ui-state-hover {
 	z-index: 2;
 }
-	
+
 .fc-toolbar .fc-state-down {
 	z-index: 3;
 }
@@ -1056,7 +1057,7 @@ be a descendant of the grid when it is being dragged.
 	right: 0;
 	bottom: 0;
 	height: 8px;
-	overflow: hidden;
+	overflow: scroll;
 	line-height: 8px;
 	font-size: 11px;
 	font-family: monospace;

@@ -1,0 +1,659 @@
+<html>
+<head>
+<meta charset='utf-8' />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link href='fullcalendar/dist/fullcalendar.css' rel='stylesheet' />
+<link href='fullcalendar/dist/fullcalendar.print.css' rel='stylesheet' media='print' />
+<script src='moment/moment.js'></script>
+<script src='jquery/dist/jquery.js'></script>
+<script src='fullcalendar/dist/fullcalendar.js'></script>
+<link rel="stylesheet" type='text/css' href="../homepage-style.css" media="screen" title="no title" charset="utf-8">
+<script>
+	$(document).ready(function() {
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,basicWeek,basicDay'
+			},
+			defaultDate: '2015-02-12',
+			editable: true,
+			eventLimit: true, // allow "more" link when too many events
+			events: [
+				{
+					title: 'Click for Google',
+					url: 'http://google.com/',
+					start: '2015-10-02'
+				},
+        {
+					title: 'Click for Google',
+					url: 'http://google.com/',
+					start: '2015-10-03'
+				}
+			]
+		});
+	});
+</script>
+<style>
+	body {
+		margin: 40px 10px;
+		padding: 0;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		font-size: 14px;
+	}
+	#calendar {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+</style>
+</head>
+<body>
+
+  <!-- TOP NAV BAR -->
+  <div class="container-fluid">
+    <nav class="navbar navbar-default">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Hakuna</a>
+        </div>
+        <!-- Navbar ... Toggle-->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <!-- Nav Search  -->
+            <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search DB">
+              </div>
+            </form>
+            <!-- Database -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">DataBase<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">All</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Care-Recipients</a></li>
+                <li><a href="#">Care-Givers</a></li>
+                <li><a href="#">Nurses</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Health Pros</a></li>
+              </ul>
+            </li>
+            <!-- Notifications -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Notifications<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">All</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Case Owner</a></li>
+                <li><a href="#">Schedules</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- Login -->
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Sign In/Sign Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+    </nav>
+    <!-- SIDE NAVIGATION -->
+    <div class="row side-nav">
+      <div class="col-sm-4 col-md-3 sidebar">
+        <div class="mini-submenu">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </div>
+        <div class="list-group">
+            <div class="accordion" id="accordion2">
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a class="accordion-toggle list-group-item" data-toggle="collapse" data-parent="#accordion2" href="#accordian-recent-view">
+                    <i class="fa fa-comment-o"></i> Recently Viewed
+                  </a>
+                </div>
+                <div id="accordian-recent-view" class="accordion-body collapse in">
+                  <div class="accordion-inner">
+                    <ul class='side-nav-list'>
+                      <li>Mock Data</li>
+                      <li>Mock Data</li>
+                      <li>Mock Data</li>
+                      <li>Mock Data</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a class="accordion-toggle list-group-item" data-toggle="collapse" data-parent="#accordion2" href="#accordian-care-recip">Care Recipients</a>
+                </div>
+                <div id="accordian-care-recip" class="accordion-body collapse in">
+                  <div class="accordion-inner">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <ul class='side-nav-list'>
+                      <li>Mock Data</li>
+                      <li>Mock Data</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a class="accordion-toggle list-group-item" data-toggle="collapse" data-parent="#accordion2" href="#accordian-care-giver">Care Givers</a>
+                </div>
+                <div id="accordian-care-giver" class="accordion-body collapse in">
+                  <div class="accordion-inner">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <ul class='side-nav-list'>
+                      <li>Mock Data</li>
+                      <li>Mock Data</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a class="accordion-toggle list-group-item" data-toggle="collapse" data-parent="#accordion2" href="#accordian-nurse">Nurses<span class="badge">1</span></a>
+                </div>
+                <div id="accordian-nurse" class="accordion-body collapse in">
+                  <div class="accordion-inner">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <ul class='side-nav-list'>
+                      <li><span class="glyphicon glyphicon-refresh" style="color:green"></span> Mock Data</li>
+                      <li>Mock Data</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <a href="#" class="list-group-item" style='margin-top:10px'>
+                  <span class="glyphicon glyphicon-plus">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">DataBase<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">All</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Care-Recipients</a></li>
+                      <li><a href="#">Care-Givers</a></li>
+                      <li><a href="#">Nurses</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Health Pros</a></li>
+                    </ul>
+                  </span>
+              </a>
+
+              <a href="#" class="list-group-item" style='margin-top:10px'>
+                  <span class="glyphicon glyphicon-plus"></span> Create New Profile
+              </a>
+            </div> <!-- End accordian list -->
+        </div>
+      </div>
+    <!-- Nav Tabs -->
+      <div class='contentView'>
+        <nav>
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+            <li role="presentation"><a href="#healthinfo" aria-controls="healthinfo" role="tab" data-toggle="tab">Health</a></li>
+            <li role="presentation"><a href="#calendarTab" aria-controls="calendarTab" role="tab" data-toggle="tab">Calender</a></li>
+            <li role="presentation"><a href="#careteam" aria-controls="careteam" role="tab" data-toggle="tab">CareTeam</a></li>
+            <li role="presentation"><a href="#carelogs" aria-controls="carelogs" role="tab" data-toggle="tab">CareLogs</a></li>
+            <li role="presentation"><a href="#billing" aria-controls="billing" role="tab" data-toggle="tab">Billing</a></li>
+            <li role="presentation"><a href="#allforms" aria-controls="allforms" role="tab" data-toggle="tab">Forms</a></li>
+          </ul>
+        </nav>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="profile">
+            <div class="">
+              <a href="#" class="back-button"><span class="glyphicon glyphicon-chevron-left"></span>Back</a>
+              <a href="#" class="edit-button"><span class="glyphicon glyphicon-pencil"></span>Edit</a>
+              <table class='profile-table'>
+                <tr>
+                  <td>
+                    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcST4A450WfK4IAZY_IQGupqxaAhPLJ2qBmcos8lgmeSl0MjkZf5N7kkQw" alt=""/>
+                  </td>
+                  <td>
+                    <div class="care-recip">
+                      <section>
+                        <h3>Harriet Smith 84 F</h3>
+                        <p>Address: 580 West End Ave <br>New York, NY 10024 <br> <span class="glyphicon glyphicon-earphone"></span> (212)345-6789 <br>Language: Spanish, English??? </p>
+                      </section>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="care-organizer care-side-bar">
+                      <p> <h5>Primary Care Organizer : </h5>
+                        John Smith <br>
+                        Realtion: Son<br><span class="glyphicon glyphicon-earphone"></span><a href="tel:646-753-0987"> (212)345-6789 </a><br>
+                        <span class="glyphicon glyphicon-envelope"></span><a href="mailto:johnsmith@gmail.com" target='_blank'> johnsmith@gmail.com</a>
+                      </p>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="care-team care-side-bar">
+                      <p> <h5>Care Team : </h5> Care Giver : Hillary Somebody
+                        <br> Nurse : Someone Elsetoo
+                        <br>Case Owner : Will Wilcox
+                        <br>Care Organizer: John Smith, Jane Smith
+                      </p>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <!-- Active/Inactive Section -->
+              <div class="update-alert-container">
+                <div class="updates">
+                  <h4>Status:<span style='color:green'><u>Active</u></span></h4><br>
+                  <table>
+                    <tr>
+                      <th>Likes <span class="glyphicon glyphicon-ok"></th>
+                      <th>Dislikes <span class="glyphicon glyphicon-remove"></th>
+                    </tr>
+                    <tr>
+                      <td>Dogs</td>
+                      <td>Smoking</td>
+                    </tr>
+                    <tr>
+                      <td>Cooking</td>
+                      <td>Cats/longstufftesting</td>
+                    </tr>
+                    <tr>
+                      <td>Music/Dancing/Ballet</td>
+                      <td></td>
+                    </tr>
+                  </table>
+                  <div class="other-info">
+                    <h5><span style='color:red'>Allergies:</span>  Shrimp, Sulfa</h5>
+                    <p class="glyphicon glyphicon-remove"></p><h5> Car Required </h5> <br>
+                    <h5>Service Requested:</h5>
+                    <p>24/7 Homecare</p> <br>
+                    <h5>Nearest Transportation:</h5>
+                    <ul>
+                      <li>Subway</li>
+                      <li>1-2-3 to 86th Street Station</li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Alerts/Schedule Section -->
+                <div class="alerts">
+                  <div class="alerts-table-div">
+                    <table class='alert-table'>
+                      <tbody>
+                        <tr>
+                          <th rowspan="4" class='th-glyph'><span class="glyphicon glyphicon-big glyphicon-alert"></span></th>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Schedule Change for 09/26 </td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="alerts-table-div">
+                    <table class='alert-table'>
+                      <tbody>
+                        <tr>
+                          <th rowspan="4" class='th-glyph'><a href="#calendarTab" aria-controls="true" role="tab" data-toggle="tab" style='text-decoration:none'><span class="glyphicon glyphicon-big glyphicon-calendar"></span></a></th>
+                          <td>Next Scheduled Visit:</td>
+                          <td>09/26 10:00am-1:30pm</td>
+                        </tr>
+                        <tr>
+                          <td>Care Giver: Jimmy Rollins</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Following Appointment:</td>
+                          <td>10/02 10:00am-1:30pm</td>
+                        </tr>
+                        <tr>
+                          <td>Care Giver: Suzie Randall</td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="alerts-table-div">
+                    <table class='alert-table'>
+                      <tbody>
+                        <tr>
+                          <th rowspan="4" class='th-glyph'><a href="#carelogs" aria-controls="true" role="tab" data-toggle="tab" style='text-decoration:none'><span class="glyphicon glyphicon-big glyphicon-pencil"></span></a></th>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>New Note Added (09/27)</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Following Appointment:</td>
+                          <td>10/02 10:00am-1:30pm</td>
+                        </tr>
+                        <tr>
+                          <td>Care Giver: Suzie Randall</td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- Messages -->
+          <div role="tabpanel" class="tab-pane" id="healthinfo">
+            <div class="alert alert-danger" role="alert" style="max-width:70%">
+              <div class="container">
+
+              <div class="form-div">
+                <!-- <label for="">Assesment Date</label> -->
+                <form class="" action="index.html" method="POST" style="width:70%">
+                  <table class='top-table'>
+                    <tr>
+                      <td>
+                        <span style="color:black"><h5>Assesment Date</h5></span>
+                        </td>
+                      <td> <input type="text" name="month" value="" required></td>
+                      <td> <input type="number" name="day" value="" required></td>
+                      <td> <input type="number" name="year" value="" required></td>
+                      <td>
+                        <span style="color:black"> at </span>
+                        <select id="hours" name="hours">
+                          <option></option>
+                        </select>:
+                        <select id="minutes" name="minutes">
+                          <option></option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="ampm">
+                          <option>AM</option>
+                          <option>PM</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>Month</td>
+                      <td>Day</td>
+                      <td>Year</td>
+                    </tr>
+                  </table>
+                </form>
+              </div>
+
+              <div class="form-div">
+                <h3>Patient Information:</h3>
+              </div>
+
+              <div class="row">
+                <form method="post" name="phoneForm" role="form" required>
+                  <div class="col-md-4 col-xs-12" style='border:1px solid red'>
+                    <h5>Full Name</h5>
+                    <table>
+                      <tr>
+                        <td><input type="text" name="name" value=""></td>
+                        <td></td>
+                        <td><input type="text" name="name" value=""></td>
+                      </tr>
+                      <tr>
+                        <td>Full Name</td>
+                        <td></td>
+                        <td>Last Name</td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <div class="col-md-4 col-xs-12">
+                    <h5>Phone Number</h5>
+                    <table>
+                      <tr>
+                        <td><input type="number" step="3" name="areaCode" required></td>
+                        <td>-</td>
+                        <td><input type="number" maxlength="7" name="phoneNo" required></td>
+                      </tr>
+                      <tr>
+                        <td>Area Code</td>
+                        <td></td>
+                        <td>Phone Number</td>
+                      </tr>
+                    </table>
+                  </div>
+                </form>
+              </div>
+
+              <div class="row">
+
+                <form role="form" name="emailForm" required>
+                  <div class="col-md-6 col-xs-12">
+                    <h5>E-mail</h5>
+                    <table>
+                      <tr>
+                        <td>
+                          <input type="email" name="email" placeholder="example@example.com" style="width:214%" required>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+
+                <div class="col-md-6 col-xs-12">
+                  <h5>Address</h5>
+                  <table>
+                    <tr>
+                      <td><input type="text" name="name" value="" style="width:208%"></td>
+                    </tr>
+                    <tr>
+                      <td>Street Address</td>
+                    </tr>
+                    <tr>
+                      <td><input type="text" name="name" value="" style="width:208%"></td>
+                    </tr>
+                    <tr>
+                      <td>Street Address Line 2</td>
+                    </tr>
+                    <tr>
+                      <td><input type="text" name="name" value=""></td>
+                      <td><input type="text" name="name" value=""></td>
+                    </tr>
+                    <tr>
+                      <td>City</td>
+                      <td>State/Province</td>
+                    </tr>
+                    <tr>
+                      <td><input type="number" name="name" value=""></td>
+                      <td><select class="" name="">
+                        <option value="USA">United States</option>
+                        <option value="UKR">Ukraine</option>
+                        <option value="ARE">United Arab Emirates</option>
+                        <option value="GBR">United Kingdom</option>
+                      </select></td>
+                    </tr>
+                    <tr>
+                      <td>Postal/Zip Code</td>
+                      <td>Country</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 col-xs-12">
+                  <h5>Birth Date</h5>
+                  <table>
+                    <tr>
+                      <td>
+                        <select class="" name="">
+                          <option></option>
+                          <option value="JAN">January</option>
+                          <option value="FEB">Feburary</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select class="" name="">
+                          <option></option>
+                          <option value="1">1</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select name="dob">
+                          <option></option>
+                          <option value="1988">1988</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Month</td>
+                      <td>Day</td>
+                      <td>Year</td>
+                    </tr>
+                  </table>
+                </div>
+
+                <div class="col-md-6 col-xs-12">
+                  <h5>Gender</h5>
+                  <select class="" name="">
+                    <option></option>
+                    <option value="F">Female</option>
+                    <option value="M">Male</option>
+                    <option value="O">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- <input type="submit" name="submit" value="submit" onclick="validateEmail()"></input> -->
+              <input type="submit" name="submit" value="submit" onclick="(validatePhone() && validateEmail())"></input>
+
+            </form>
+            </div>
+            </div>
+          </div>
+
+          <div role="tabpanel" class="tab-pane" id="calendarTab" style="overflow-y: scroll; height: 100%;">
+            <div id='calendar' style="position:relative; overflow-y:scroll;"></div>
+
+          </div>
+
+          <div role="tabpanel" class="tab-pane" id="careteam">
+            <a href="#" class="back-button"><span class="glyphicon glyphicon-chevron-left"></span>Back</a>
+              <a style="position:right" href="@admin.routes.UserLeadApplication.editdetails(intakeLead.id)" class="edit-button">
+                  <span class="glyphicon glyphicon-pencil"></span>Edit</a>
+              <h3>John's Care Team</h3>
+              <table>
+                  <tbody>
+                  <tr>
+                      <td><b>Care Coordinator:</b> @intakeLead.case_owner</td>
+                  </tr>
+                  <tr>
+                      <td><b>Nurse:</b> Mock Name</td>
+                  </tr>
+                  <tr>
+                      <td><b>Care Organizers:</b>
+                          <ul>
+                              <li>
+                                  @intakeLead.care_organizer, Relation: son, <span class="glyphicon glyphicon-earphone"></span><a href="tel:@intakeLead.co_tel">  </a>
+                                  <span class="glyphicon glyphicon-envelope"></span><a style="" href="mailto:@intakeLead.co_email?Subject=A%20Message%20from%20Hakuna" target="_blank"></a>
+                              </li>
+                              <li>Care Organizer#2-Name, Phone, Email, Relation</li>
+                          </ul>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td><b>Care Givers:</b>
+                          <ul>
+                              <a href="#"><li>Care Giver #1</li></a>
+                              <a href="#"><li>Care Giver #2</li></a>
+                          </ul>
+                      </td>
+                  </tr>
+                  </tbody>
+              </table>
+
+              <table class='sortable'>
+                  <tr>
+                      <th>
+                          Date Added
+                      </th>
+                      <th>
+                          Message
+                      </th>
+                  </tr>
+                  <tr>
+                      <td>
+                          @intakeLead.updated_at.format("MM/dd/YY h:mm")
+                      </td>
+                      <td>
+                          MOCK Message
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          @intakeLead.updated_at.format("MM/dd/YY h:mm")
+                      </td>
+                      <td>
+                          Another mOCK Message
+                      </td>
+                  </tr>
+              </table>
+          </div>
+
+          <div role="tabpanel" class="tab-pane" id="carelogs">
+            <h3>Care LogsX</h3>
+          </div>
+
+          <div role="tabpanel" class="tab-pane" id="billing">
+            <h3>billing</h3>
+          </div>
+
+        </div> <!-- end: Tab Content -->
+
+      </div> <!-- End: contentView -->
+
+    </div> <!-- End: SideNav row -->
+
+  </div> <!-- End: container-fluid -->
+
+
+</body>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+// hide side nav accordians
+$('#accordian-care-recip').collapse("hide");
+$('#accordian-care-giver').collapse("hide");
+$('#accordian-nurse').collapse("hide");
+// change Tab from alternate link
+$(function(){
+    $(document).on('click.bs.tab.data-api', '[data-toggle="tab"], [data-toggle="pill"]', function (e) {
+      e.preventDefault()
+      $('ul.nav li a[href="' + $(this).attr('href') + '"]').tab('show');
+   })
+ });
+
+
+</script>
+</html>
